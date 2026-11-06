@@ -6,31 +6,36 @@ LibreTV TV 用的直播台标库。把 [mytv-android/myTVlogo](https://github.co
 
 ## 在 LibreTV TV 里怎么用
 
-进「设置 → 直播 → 台标地址」，填这一行（**推荐，实测最快**）：
+进「设置 → 直播 → 台标地址」，填这一行（**推荐，实测最稳**）：
+
+```
+https://ghfast.top/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/img/{name}.webp
+```
+
+`{name}` 会被替换成频道名（URL 编码后）。App 内部会把 `CCTV1综合` 自动归一成 `-CCTV1`，所以不用手改文件名。
+
+想快一点可以用 Pages（偶尔会抽）：
 
 ```
 https://wgsjjj.github.io/LibreTV-Logo/img/{name}.webp
 ```
 
-`{name}` 会被替换成频道名（URL 编码后）。App 内部会把 `CCTV1综合` 自动归一成 `-CCTV1`，所以不用手改文件名。
-
-github.io 连不上时换这两条（同样把 `{name}` 留着）：
+备用：
 
 ```
 https://gh-proxy.com/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/img/{name}.webp
-https://ghfast.top/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/img/{name}.webp
 ```
 
-三条通道实测（2026-11-06，本机）：
+三条通道实测（2026-11-06，本机，中文名交叉验证）：
 
-| 通道 | 响应 | 耗时 |
-|---|---|---|
-| GitHub Pages | 200 | 0.64s |
-| ghfast.top | 200 | 0.99s |
-| gh-proxy.com | 200 | 2.17s |
-| jsDelivr | 301 回源 | 不可用（仓库超过 jsDelivr 的代理阈值，会跳回 raw，国内直连不通） |
+| 通道 | 成功率 | 单张耗时 | 说明 |
+|---|---|---|---|
+| ghfast.top | 5/5 | 约 1.0s | 推荐 |
+| gh-proxy.com | 5/5 | 约 2.2s | 备用 |
+| GitHub Pages | 3/5 | 约 0.5s | 快但偶发连不上 |
+| jsDelivr | — | — | 不可用：仓库超过代理阈值，301 跳回 raw，国内直连不通 |
 
-需要整个库下载的话：`https://github.com/wgsjjj/LibreTV-Logo/archive/refs/heads/main.zip`
+需要整个库下载：`https://github.com/wgsjjj/LibreTV-Logo/archive/refs/heads/main.zip`（约 34 MB）
 
 ## 命名规则
 
