@@ -1,3 +1,0 @@
-# LibreTV Logo
-
-test
