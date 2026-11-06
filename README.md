@@ -6,20 +6,31 @@ LibreTV TV 用的直播台标库。把 [mytv-android/myTVlogo](https://github.co
 
 ## 在 LibreTV TV 里怎么用
 
-进「设置 → 直播 → 台标地址」，填这一行：
+进「设置 → 直播 → 台标地址」，填这一行（**推荐，实测最快**）：
 
 ```
-https://cdn.jsdelivr.net/gh/wgsjjj/LibreTV-Logo@main/img/{name}.webp
+https://wgsjjj.github.io/LibreTV-Logo/img/{name}.webp
 ```
 
 `{name}` 会被替换成频道名（URL 编码后）。App 内部会把 `CCTV1综合` 自动归一成 `-CCTV1`，所以不用手改文件名。
 
-jsDelivr 抽风时换下面两条（同样把 `{name}` 留着）：
+github.io 连不上时换这两条（同样把 `{name}` 留着）：
 
 ```
 https://gh-proxy.com/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/img/{name}.webp
 https://ghfast.top/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/img/{name}.webp
 ```
+
+三条通道实测（2026-11-06，本机）：
+
+| 通道 | 响应 | 耗时 |
+|---|---|---|
+| GitHub Pages | 200 | 0.64s |
+| ghfast.top | 200 | 0.99s |
+| gh-proxy.com | 200 | 2.17s |
+| jsDelivr | 301 回源 | 不可用（仓库超过 jsDelivr 的代理阈值，会跳回 raw，国内直连不通） |
+
+需要整个库下载的话：`https://github.com/wgsjjj/LibreTV-Logo/archive/refs/heads/main.zip`
 
 ## 命名规则
 
