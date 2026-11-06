@@ -53,6 +53,8 @@ https://gh-proxy.com/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/
 | `img/` | 全部台标，4027 个 `.webp` |
 | `logo-list.txt` | 一行一个台标名（不含扩展名），方便程序比对 |
 | `index.json` | 带分组统计的完整清单，`groups` 里分 cctv / chinese / international |
+| `international-list.txt` | 未收录的 2801 个境外台标文件名，按需自行补齐 |
+| `international-big.txt` | 上表中 515 个 ≥300KB 的（共 740 MB，占源库 93% 体积） |
 
 ## 覆盖范围
 
@@ -61,6 +63,30 @@ https://gh-proxy.com/https://raw.githubusercontent.com/wgsjjj/LibreTV-Logo/main/
 - **国际台** 204 张（第一批顺带拉的，不完整）
 
 不含：境外政治宣传类频道。
+
+## 境外台标（未收录，可自行补齐）
+
+源库另有 **2801 张纯英文名的境外台标，共 796 MB**。其中 515 张 ≥300KB 的占了 740 MB（93% 体积），剩下 2286 张只有 56 MB。本仓库暂未收录。
+
+| 清单 | 内容 |
+|---|---|
+| `international-list.txt` | 全部 2801 个文件名，一行一个 |
+| `international-big.txt` | 其中 515 个 ≥300KB 的，就是体积大头 |
+
+**下载整包（878 MB）**
+
+```
+https://github.com/mytv-android/myTVlogo/archive/refs/heads/main.zip
+https://ghfast.top/https://github.com/mytv-android/myTVlogo/archive/refs/heads/main.zip
+```
+
+**按名单单张取**（`{name}` 换成清单里的名字，空格要 URL 编码成 `%20`）
+
+```
+https://ghfast.top/https://raw.githubusercontent.com/mytv-android/myTVlogo/main/img/{name}.png
+```
+
+想省流量就只下 `international-big.txt` 以外的 2286 张小图（56 MB），能覆盖 82% 的台标数量。
 
 ## 来源与版权
 
